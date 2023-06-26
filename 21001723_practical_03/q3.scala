@@ -1,6 +1,7 @@
 object Question3{
     def main(args: Array[String]) = {
-        println(getAvg(2, 1))
+        val avg = getAvg(2,9)
+        println(f"$avg%.2f")
     }
 
     def getAvg(num1: Int, num2: Int): Double = {
