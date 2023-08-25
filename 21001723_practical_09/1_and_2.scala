@@ -1,29 +1,25 @@
-class Rational(num: Int) {
+class Rational(num: Double) {
 
-    //Q1
-    def neg: Rational = new Rational(-num)
+    // Q1
+    def neg: Rational = Rational(-num)
 
-    //Q2
+    // Q2
     def sub(other: Rational): Rational =
-        new Rational(num - other.toInt)
+        new Rational(num - other.toDouble)
   
-    def toInt: Int = num
-    override def toString: String = s"$num"
+    def toDouble: Double = num
+    override def toString: String = num.toString()
 }
 
 object Main extends App{
     //val x = new Rational(4)
-    //println(x)
     //println(x.neg)
 
-    // val x = new Rational(3/4)
-    // val y = new Rational(5/8)
-    // val z = new Rational(2/7)
+    val x = new Rational(3.0/4.0)
+    val y = new Rational(5.0/8.0)
+    val z = new Rational(2.0/7.0)
 
-    val x = new Rational(3)
-    val y = new Rational(5)
-    val z = new Rational(2)
-
+    println(x.neg)
     val result = x.sub(y).sub(z)
     println(result)
 }
